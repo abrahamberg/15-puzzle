@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.GameSpace{
+  width: 270px;
+  height: 270px;
+  background-color: darkgray;
+}
+.GameCell{
+  display: table-cell;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  background-color:cornflowerblue;
+  float: left;
+  text-align: center;
+ 
+  border: 5px black solid;
+}
+.GameNumber{
+  position: relative;
+  top: 10%;
+  transform: translateY(-50%);
+  font: 60px bolder ;
+
+}
+.GameNumberZero{
+  display: none;
+}
+.GameCellZero{
+  display: table-cell;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  background-color:darkgray;
+  float: left;
+  text-align: center;
+ 
+  border: 5px gray solid;
+}
+
