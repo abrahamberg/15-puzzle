@@ -13,21 +13,31 @@ code {
 }
 
 .GameSpace{
-  width: 270px;
-  height: 270px;
+  width: 360px;
+  height: 360px;
   background-color: darkgray;
 }
 .GameCell{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   display: table-cell;
   vertical-align: middle;
-  width: 80px;
-  height: 80px;
+  width: 25%;
+  height: 25%;
   background-color:cornflowerblue;
   float: left;
   text-align: center;
  
   border: 5px black solid;
 }
+
+.GameCell:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
 .GameNumber{
   position: relative;
   top: 10%;
@@ -39,14 +49,23 @@ code {
   display: none;
 }
 .GameCellZero{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   display: table-cell;
   vertical-align: middle;
-  width: 80px;
-  height: 80px;
+  width: 25%;
+  /*height: auto;*/
   background-color:darkgray;
   float: left;
   text-align: center;
  
   border: 5px gray solid;
+}
+
+.GameCellZero:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
