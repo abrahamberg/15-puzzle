@@ -5,7 +5,7 @@ import Logics from '../Logics.js';
 
 
 function MainGame() {
-  const [nums,setNums] = useState( Logics.shuffle(Logics.range(0,15)) );
+  const [nums,setNums] = useState( Logics.shuffle([...Logics.range(1,15),0]) );
   const clickabels= Logics.calculateClickabels(nums);
   const CellClicked =(x)=> {
     
