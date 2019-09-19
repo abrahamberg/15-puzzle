@@ -1,9 +1,6 @@
-import React ,{useState} from 'react';
+import React from 'react';
 
-function GameCell(props) {
-    //const [row1,setRow1] = useState(utils.range(0,8));
-    
-    
+function GameCell(props) { 
       return (
         <div    
         onClick={() =>props.onClick(props.number)} 

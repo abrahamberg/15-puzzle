@@ -37,8 +37,8 @@ const Logics ={
         let currentArry = [...array];
         for (let i = 0; i < randomeMoves; i++) { 
           let possibleNumbers = Logics.calculateClickabels(currentArry);
-          let chosenNo = Logics.randomeToSwap(possibleNumbers);
-          currentArry = Logics.switchPlace(currentArry,chosenNo);
+          let chosenNo = Logics.randomeToSwap(possibleNumbers);  //chose ramdomly one of options. 
+          currentArry = Logics.switchPlace(currentArry,chosenNo); // swap the place of the number with 0
         }
         return currentArry;
       

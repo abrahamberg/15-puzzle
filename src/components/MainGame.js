@@ -5,14 +5,11 @@ import Logics from '../Logics.js';
 
 
 function MainGame() {
-  const [nums,setNums] = useState( Logics.shuffle(Logics.range(0,15)) );
-  const clickabels= Logics.calculateClickabels(nums);
+  const [nums,setNums] = useState( Logics.shuffle([...Logics.range(1,15),0]) ); //create a arry from 1 to 15 and 0 and shuffle it 
+  const clickabels= Logics.calculateClickabels(nums); //calculate which cells are playable arry of cell numbers 
   const CellClicked =(x)=> {
-    
-    
     if(clickabels.includes(x)) 
       setNums(Logics.switchPlace(nums,x));
-        
     }
   return (
     <div className="MainGame">
