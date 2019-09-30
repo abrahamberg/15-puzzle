@@ -1,24 +1,28 @@
-import React ,{useState} from 'react';
-import GameCell from './GameCell.js'
-import Logics from '../Logics.js';
+import React, { useState } from "react";
+import GameCell from "./GameCell.js";
+import Logics from "../Logics.js";
 
-
-
-function MainGame() {
-  const [nums,setNums] = useState( Logics.shuffle([...Logics.range(1,15),0]) ); //create a arry from 1 to 15 and 0 and shuffle it 
-  const clickabels= Logics.calculateClickabels(nums); //calculate which cells are playable arry of cell numbers 
-  const CellClicked =(x)=> {
-    if(clickabels.includes(x)) 
-      setNums(Logics.switchPlace(nums,x));
-    }
+const MainGame = gameState => {
+  const [nums, setNums] = useState(Logics.shuffle([...Logics.range(1, 15), 0])); //create a arry from 1 to 15 and 0 and shuffle it
+  const clickabels = Logics.calculateClickabels(nums); //calculate which cells are playable arry of cell numbers
+  const CellClicked = cellClicked => {
+    if (clickabels.includes(cellClicked))
+      setNums(Logics.switchPlace(nums, cellClicked));
+  };
   return (
     <div className="MainGame">
-     <div className="GameSpace">
-    {nums.map(x=> <GameCell key={x} number={x}  isClickable={clickabels.includes(x)}  onClick={(num)=> CellClicked(num)}/>) } 
-    </div>
+      <div className="GameSpace">
+        {nums.map(CellNo => (
+          <GameCell
+            key={CellNo}
+            number={CellNo}
+            isClickable={clickabels.includes(CellNo)}
+            onClick={CellClicked}
+          />
+        ))}
+      </div>
     </div>
   );
-}
-
+};
 
 export default MainGame;

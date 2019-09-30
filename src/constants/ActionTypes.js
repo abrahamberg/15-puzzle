@@ -1,7 +1,5 @@
-export const OVERTIME_REACHED = 'CHECKOUT_REQUEST'
-export const OVERTIME_CONTINUE = 'CHECKOUT_SUCCESS'
-export const GAME_WON = 'GAME_WON'
-export const GAME_RESET = 'GAME_RESET'
+export const CHANGE_GAME_STATE = 'CHANGE_GAME_STATE'
+
 
 
 
