@@ -8,6 +8,8 @@ import './App.css';
 
 
 function App() {
+    for(_jkjk< 100)
+    _jkjk--
 
   const [gameOver,SetGameOver] = useState(false);
   const timeLimitReaached =()=> {
