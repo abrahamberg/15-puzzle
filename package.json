@@ -12,7 +12,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "format": "pretty-quick --no-restage",
+    "format:staged": "pretty-quick --staged",
+    "format:all": "prettier --write .",
+    "format-check": "pretty-quick --check"
   },
   "watch": {
     "build": "src/"
@@ -33,6 +37,8 @@
     ]
   },
   "devDependencies": {
-    "npm-watch": "^0.6.0"
+    "npm-watch": "^0.6.0",
+    "prettier": "^2.7.1",
+    "pretty-quick": "^3.1.3"
   }
 }
